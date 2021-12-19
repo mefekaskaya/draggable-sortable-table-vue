@@ -14,6 +14,7 @@
             @drop="onColumnDrop($event, index)"
           >
             {{ column.label }}
+             <font-awesome-icon icon="sort" />
           </th>
         </tr>
       </thead>
