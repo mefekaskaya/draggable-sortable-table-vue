@@ -27,27 +27,45 @@ export const columns = [
   
   export const rows = [
     {
-      flightNumber: 'AA1234',
-      airline: 'A Airlines',
+      flightNumber: 'BD674',
+      airline: 'Turkish Airlines',
       destination: 'Istanbul-Ankara',
       scheduled: getRandomDate(),
     },
     {
-      flightNumber: 'BB1234',
-      airline: 'B Airlines',
-      destination: 'Istanbul-İzmir',
+      flightNumber: 'BA1326',
+      airline: 'American Airlines',
+      destination: 'Washington-Los Angeles',
       scheduled: getRandomDate(),
     },
     {
-      flightNumber: 'CC1234',
-      airline: 'C Airlines',
-      destination: 'Ankara-Istanbul',
+      flightNumber: 'BA1476',
+      airline: 'United Airlines',
+      destination: 'Manchester-Istanbul',
       scheduled: getRandomDate(),
     },
     {
-      flightNumber: 'DD1234',
-      airline: 'D Airlines',
+      flightNumber: 'GF5232',
+      airline: 'Delta Air Lines',
       destination: 'London-Paris',
+      scheduled: getRandomDate(),
+    },
+    {
+      flightNumber: 'AA8025',
+      airline: 'Qatar Airways',
+      destination: 'Doha-Istanbul',
+      scheduled: getRandomDate(),
+    },
+    {
+      flightNumber: 'AA7991',
+      airline: 'Ryanair',
+      destination: 'Milano-Paris',
+      scheduled: getRandomDate(),
+    },
+    {
+      flightNumber: 'AA8017',
+      airline: 'Lufthansa',
+      destination: 'Berlin-London',
       scheduled: getRandomDate(),
     },
     {
@@ -57,41 +75,23 @@ export const columns = [
       scheduled: getRandomDate(),
     },
     {
-        flightNumber: 'EE1234',
-        airline: 'E Airlines',
-        destination: 'New York-Amsterdam',
-        scheduled: getRandomDate(),
-      },
-      {
-        flightNumber: 'EE1234',
-        airline: 'E Airlines',
-        destination: 'New York-Amsterdam',
-        scheduled: getRandomDate(),
-      },
-      {
-        flightNumber: 'EE1234',
-        airline: 'E Airlines',
-        destination: 'New York-Amsterdam',
-        scheduled: getRandomDate(),
-      },
-      {
-        flightNumber: 'EE1234',
-        airline: 'E Airlines',
-        destination: 'New York-Amsterdam',
-        scheduled: getRandomDate(),
-      },
-      {
-        flightNumber: 'EE1234',
-        airline: 'E Airlines',
-        destination: 'New York-Amsterdam',
-        scheduled: getRandomDate(),
-      },
-      {
-        flightNumber: 'EE1234',
-        airline: 'E Airlines',
-        destination: 'New York-Amsterdam',
-        scheduled: getRandomDate(),
-      },
+      flightNumber: 'EE1234',
+      airline: 'E Airlines',
+      destination: 'New York-Amsterdam',
+      scheduled: getRandomDate(),
+    },
+    {
+      flightNumber: 'BA1442',
+      airline: 'Malaysia Airlines',
+      destination: 'Pekin-Istanbul',
+      scheduled: getRandomDate(),
+    },
+    {
+      flightNumber: 'BA1388',
+      airline: 'Iberia Express',
+      destination: 'Barcelona-Madrid',
+      scheduled: getRandomDate(),
+    },
   ];
   
   function getRandomDate() {
