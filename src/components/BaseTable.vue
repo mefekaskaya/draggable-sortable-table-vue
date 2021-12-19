@@ -64,10 +64,7 @@ export default {
     onColumnDrop(event, droppedIndex) {
       const draggedIndex = Number(event.dataTransfer.getData('draggedIndex'));
       if (draggedIndex !== droppedIndex) {
-        console.log(draggedIndex, droppedIndex);
-        const item = JSON.parse(
-          JSON.stringify(this.sortedColumns[draggedIndex])
-        );
+        const item = this.sortedColumns[draggedIndex];
         this.sortedColumns.splice(draggedIndex, 1);
         this.sortedColumns = [
           ...this.sortedColumns.slice(0, droppedIndex),
