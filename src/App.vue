@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <BaseTable :columns="columns" :rows="rows" />
+    <BaseTable :columns="columns" :rows="rows" :loading="loading" />
   </div>
 </template>
 
@@ -17,8 +17,16 @@ export default {
     return {
       columns,
       rows,
+      loading: false,
     };
+  },
+  beforeMount() {
+    this.loading = true;
+    setTimeout(() => {
+      this.loading = false;
+    }, 500);
   },
 };
 </script>
-<style scoped></style>
+<style scoped>
+</style>
