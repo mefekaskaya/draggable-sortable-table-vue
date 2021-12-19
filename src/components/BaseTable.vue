@@ -16,6 +16,7 @@
           >
             <div class="table-header-cell">
               <span
+                class="table-cell-label"
                 :class="isDraggingActive && column.draggable && 'draggable'"
               >
                 {{ column.label }}
@@ -196,6 +197,7 @@ export default {
     border: 1px solid transparent;
     border-radius: 0.25rem;
     cursor: pointer;
+    width: 80px;
     }
     .sort-btn:focus {
     outline: none;
@@ -206,5 +208,9 @@ export default {
     .active-btn {
     background-color: rgb(48, 133, 245);
     color: #f8f9fa;
+    }
+    .table-cell-label {
+        display: inline-block;
+        width: 100%;
     }
 </style>
