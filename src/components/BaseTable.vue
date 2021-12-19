@@ -197,7 +197,7 @@ export default {
     border: 1px solid transparent;
     border-radius: 0.25rem;
     cursor: pointer;
-    width: 80px;
+    width: 55px;
     }
     .sort-btn:focus {
     outline: none;
