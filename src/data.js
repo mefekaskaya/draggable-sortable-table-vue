@@ -56,6 +56,42 @@ export const columns = [
       destination: 'New York-Amsterdam',
       scheduled: getRandomDate(),
     },
+    {
+        flightNumber: 'EE1234',
+        airline: 'E Airlines',
+        destination: 'New York-Amsterdam',
+        scheduled: getRandomDate(),
+      },
+      {
+        flightNumber: 'EE1234',
+        airline: 'E Airlines',
+        destination: 'New York-Amsterdam',
+        scheduled: getRandomDate(),
+      },
+      {
+        flightNumber: 'EE1234',
+        airline: 'E Airlines',
+        destination: 'New York-Amsterdam',
+        scheduled: getRandomDate(),
+      },
+      {
+        flightNumber: 'EE1234',
+        airline: 'E Airlines',
+        destination: 'New York-Amsterdam',
+        scheduled: getRandomDate(),
+      },
+      {
+        flightNumber: 'EE1234',
+        airline: 'E Airlines',
+        destination: 'New York-Amsterdam',
+        scheduled: getRandomDate(),
+      },
+      {
+        flightNumber: 'EE1234',
+        airline: 'E Airlines',
+        destination: 'New York-Amsterdam',
+        scheduled: getRandomDate(),
+      },
   ];
   
   function getRandomDate() {
