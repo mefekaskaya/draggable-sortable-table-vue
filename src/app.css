@@ -1,0 +1,13 @@
+.app-loading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: white;
+  background-image: url("https://www.bluechipexterminating.com/wp-content/uploads/2020/02/loading-gif-png-5.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 64px;
+  opacity: 0.5;
+}
