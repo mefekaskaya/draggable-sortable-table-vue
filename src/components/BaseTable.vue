@@ -1,5 +1,5 @@
 <template>
-  <div class="table-wrapper">
+  <div class="table-wrapper" v-on="$listeners" v-bind="$attrs">
     <table>
       <thead>
         <tr>

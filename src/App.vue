@@ -1,5 +1,7 @@
 <template>
-  <div id="app"><BaseTable :columns="columns" :rows="rows"></BaseTable>,</div>
+  <div id="app">
+    <BaseTable :columns="columns" :rows="rows" />
+  </div>
 </template>
 
 <script>
