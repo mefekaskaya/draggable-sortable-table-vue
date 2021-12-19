@@ -26,7 +26,7 @@
                 :class="getSortInfoByField(column.field) && 'active-btn'"
               >
                 <span>{{ getSortOrder(column.field) }}</span>
-                <font-awesome-icon icon="sort" />
+                <font-awesome-icon :icon="getSortIconByField(column.field)" />
               </button>
             </div>
           </th>
@@ -83,6 +83,8 @@ export default {
           const fields = this.sortInformations.map((item) => item.field);
           const orders = this.sortInformations.map((item) => item.orderBy);
           this.sortedRows = orderBy(this.sortedRows, fields, orders);
+        } else {
+          this.sortedRows = this.rows;
         }
       },
       deep: true,
@@ -136,6 +138,13 @@ export default {
     },
     getSortInfoIndexByField(field) {
       return this.sortInformations.findIndex((item) => item.field === field);
+    },
+    getSortIconByField(field) {
+      const info = this.getSortInfoByField(field);
+      if (info && info.orderBy === 'desc') {
+        return 'sort-alpha-down-alt';
+      }
+      return 'sort-alpha-down';
     },
   },
 };
