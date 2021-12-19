@@ -6,23 +6,24 @@
           <th
             v-for="(column, index) in sortedColumns"
             :key="`column-${index}`"
-            :draggable="isColumnDraggable(column)"
+            :draggable="isDraggingActive && column.draggable"
             @dragstart="onColumnDragStart($event, index)"
             @dragover.prevent
             @dragenter.prevent
             @drop="onColumnDrop($event, index)"
           >
             <div class="table-header">
-              <span :class="isColumnDraggable(column) && 'draggable'">
-                {{ column.label }}
+              <span
+                :class="isDraggingActive && column.draggable && 'draggable'"
+              >
               </span>
               <button
-                v-if="isColumnSortable(column)"
+                v-if="isSortingActive && column.sortable"
                 @click="sortDataByColumn(column.field)"
                 @dblclick="removeSortDataFromList(column.field)"
                 type="button"
                 class="sort-btn"
-                :class="isSortActive(column.field) && 'active-btn'"
+                :class="getSortInfoByField(column.field) && 'active-btn'"
               >
                 <span>{{ getSortOrder(column.field) }}</span>
                 <font-awesome-icon icon="sort" />
@@ -107,7 +108,7 @@ export default {
     sortDataByColumn(field) {
       const ASCENDING_KEY = 'asc';
       const DESCENDING_KEY = 'desc';
-      let sortInfo = this.sortInformations.find((item) => item.field === field);
+      let sortInfo = this.getSortInfoByField(field);
       if (sortInfo) {
         if (sortInfo.orderBy === ASCENDING_KEY) {
           sortInfo.orderBy = DESCENDING_KEY;
@@ -122,29 +123,19 @@ export default {
         this.sortInformations.push(sortInfo);
       }
     },
-    isSortActive(field) {
-      return this.sortInformations.some((item) => item.field === field);
-    },
     getSortOrder(field) {
-      if (this.sortInformations.length) {
-        const index = this.sortInformations.findIndex(
-          (item) => item.field === field
-        );
-        return index > -1 ? index + 1 : null;
-      }
-      return null;
+      const index = this.getSortInfoIndexByField(field);
+      return index > -1 ? index + 1 : null;
     },
     removeSortDataFromList(field) {
-      const index = this.sortInformations.findIndex(
-        (item) => item.field === field
-      );
+      const index = this.getSortInfoIndexByField(field);
       this.sortInformations.splice(index, 1);
     },
-    isColumnDraggable(item) {
-      return this.isDraggingActive && item.draggable;
+    getSortInfoByField(field) {
+      return this.sortInformations.find((item) => item.field === field);
     },
-    isColumnSortable(item) {
-      return this.isSortingActive && item.sortable;
+    getSortInfoIndexByField(field) {
+      return this.sortInformations.findIndex((item) => item.field === field);
     },
   },
 };
