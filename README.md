@@ -1,4 +1,4 @@
-sortable-draggable-table
+tav assignment sortable-draggable-table
 
 ## Project setup
 
@@ -6,16 +6,6 @@ npm install
 
 ### Compiles and hot-reloads for development
 
-npm run serve
+npm run dev
 
-### Compiles and minifies for production
-
-npm run build
-
-### Lints and fixes files
-
-npm run lint
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
+A table component which has draggable columns and sortable data. You can replace columns between each other by drag and drop. Also you can sort table data as mutliple by selected coluns as ascending or descending.
