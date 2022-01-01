@@ -1,4 +1,7 @@
-tav assignment sortable-draggable-table
+sortable-draggable-table
+
+click the header you want to sort
+drag and drop a column onto another one to change columns' place
 
 ## Project setup
 
